@@ -1,0 +1,247 @@
+[gd_scene format=3 uid="uid://elst0xn32iil"]
+
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://cugbu4w0rbbx5" path="res://platform.tscn" id="2_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://do5kx3x80xx0f" path="res://crown.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://2oqfqxx5b61g" path="res://enemy.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://btg117njqy6w6" path="res://title_screen.tscn" id="5_7jktm"]
+[ext_resource type="Script" uid="uid://c0tnr2hl2gmgb" path="res://kill_zone.gd" id="6_ryrav"]
+
+[sub_resource type="Gradient" id="Gradient_80nbo"]
+offsets = PackedFloat32Array(0.009433985, 0.3773585, 0.7641509, 1)
+colors = PackedColorArray(0.039110664, 0.27218908, 0.9788093, 1, 0.18039216, 0.60784316, 1, 1, 0.5080382, 0.8149948, 0.99999994, 1, 0.6117647, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_e2o6t"]
+gradient = SubResource("Gradient_80nbo")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7jktm"]
+size = Vector2(14482.75, 153)
+
+[node name="Game" type="Node2D" unique_id=53149098]
+
+[node name="TitleScreen" parent="." unique_id=1514919774 instance=ExtResource("5_7jktm")]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1458322270]
+position = Vector2(-175, -247)
+rotation = -1.5671695
+scale = Vector2(488.16837, -4363.7373)
+texture = SubResource("GradientTexture2D_e2o6t")
+
+[node name="Platform" parent="." unique_id=1656572266 instance=ExtResource("2_e2o6t")]
+position = Vector2(612, -336)
+scale = Vector2(1.5, 1.5)
+
+[node name="Platform2" parent="Platform" unique_id=1175456591 instance=ExtResource("2_e2o6t")]
+position = Vector2(-879.3334, 656)
+
+[node name="Platform3" parent="Platform" unique_id=254548208 instance=ExtResource("2_e2o6t")]
+position = Vector2(-396, 338.6667)
+
+[node name="Platform4" parent="Platform" unique_id=292228909 instance=ExtResource("2_e2o6t")]
+position = Vector2(-890, 132)
+
+[node name="Platform" parent="Platform" unique_id=1463713448 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1308, 336)
+
+[node name="Platform5" parent="Platform" unique_id=318145030 instance=ExtResource("2_e2o6t")]
+position = Vector2(1606.6666, -240.66669)
+
+[node name="Platform2" parent="Platform/Platform5" unique_id=902665963 instance=ExtResource("2_e2o6t")]
+position = Vector2(-933.3334, 358)
+
+[node name="Platform3" parent="Platform/Platform5" unique_id=314032726 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1107.3334, -112)
+
+[node name="Platform4" parent="Platform/Platform5" unique_id=1091146545 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1150.6667, 826.6667)
+
+[node name="Platform" parent="Platform/Platform5" unique_id=1848088386 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1492.6667, 1090.6667)
+
+[node name="Platform" parent="Platform/Platform5/Platform" unique_id=169516131 instance=ExtResource("2_e2o6t")]
+position = Vector2(1317.3333, -254.66675)
+
+[node name="Platform5" parent="Platform/Platform5" unique_id=1997462946 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2762, -403.33334)
+
+[node name="Platform2" parent="Platform/Platform5/Platform5" unique_id=850578613 instance=ExtResource("2_e2o6t")]
+position = Vector2(645.3334, 287.3333)
+
+[node name="Platform3" parent="Platform/Platform5/Platform5" unique_id=1612974262 instance=ExtResource("2_e2o6t")]
+position = Vector2(-455.33334, 392.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform5" unique_id=1143411730 instance=ExtResource("2_e2o6t")]
+position = Vector2(-944, -134)
+
+[node name="Platform" parent="Platform/Platform5/Platform5" unique_id=1789586529 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1091.3335, 624)
+
+[node name="Platform6" parent="Platform/Platform5" unique_id=530083353 instance=ExtResource("2_e2o6t")]
+position = Vector2(1422.6667, -734.6667)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6" unique_id=326061644 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1286, 43.333313)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6" unique_id=1845834851 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1807.3334, -448.6667)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform3" unique_id=656307087 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2905.3335, 339.3333)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform3/Platform3" unique_id=1638383419 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2905.3335, 339.3333)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6" unique_id=1928176960 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2122, 414.66666)
+
+[node name="Platform" parent="Platform/Platform5/Platform6" unique_id=2021684262 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1883.3334, 895.3333)
+
+[node name="Platform5" parent="Platform/Platform5/Platform6" unique_id=379851620 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2762, -403.33334)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6/Platform5" unique_id=708779832 instance=ExtResource("2_e2o6t")]
+position = Vector2(634.6667, 347.3333)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform5" unique_id=2069104219 instance=ExtResource("2_e2o6t")]
+position = Vector2(-455.33334, 392.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6/Platform5" unique_id=834274513 instance=ExtResource("2_e2o6t")]
+position = Vector2(-944, -134)
+
+[node name="Platform" parent="Platform/Platform5/Platform6/Platform5" unique_id=2002902955 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1091.3335, 624)
+
+[node name="Platform6" parent="Platform/Platform5/Platform6" unique_id=1225753751 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1651.3333, 2406.6667)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6/Platform6" unique_id=1803002833 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1286, 43.333313)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform6" unique_id=1847395223 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1807.3334, -448.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6/Platform6" unique_id=121963724 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2122, 414.66666)
+
+[node name="Platform" parent="Platform/Platform5/Platform6/Platform6" unique_id=1557062836 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1883.3334, 895.3333)
+
+[node name="Platform5" parent="Platform/Platform5/Platform6/Platform6" unique_id=86950741 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2762, -403.33334)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6/Platform6/Platform5" unique_id=1051934926 instance=ExtResource("2_e2o6t")]
+position = Vector2(634.6667, 347.3333)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform6/Platform5" unique_id=168816667 instance=ExtResource("2_e2o6t")]
+position = Vector2(-455.33334, 392.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6/Platform6/Platform5" unique_id=1017325100 instance=ExtResource("2_e2o6t")]
+position = Vector2(-944, -134)
+
+[node name="Platform" parent="Platform/Platform5/Platform6/Platform6/Platform5" unique_id=1634385097 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1091.3335, 624)
+
+[node name="Platform6" parent="Platform/Platform5/Platform6/Platform6" unique_id=999130002 instance=ExtResource("2_e2o6t")]
+position = Vector2(-3218, -1016.66675)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6/Platform6/Platform6" unique_id=45472503 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1286, 43.333313)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform6/Platform6" unique_id=1654319567 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1807.3334, -448.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6/Platform6/Platform6" unique_id=1164074094 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2122, 414.66666)
+
+[node name="Platform" parent="Platform/Platform5/Platform6/Platform6/Platform6" unique_id=1373101812 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1883.3334, 895.3333)
+
+[node name="Platform5" parent="Platform/Platform5/Platform6/Platform6/Platform6" unique_id=523450865 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2762, -403.33334)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform5" unique_id=2024779789 instance=ExtResource("2_e2o6t")]
+position = Vector2(634.6667, 347.3333)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform5" unique_id=1082881932 instance=ExtResource("2_e2o6t")]
+position = Vector2(-455.33334, 392.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform5" unique_id=1534007044 instance=ExtResource("2_e2o6t")]
+position = Vector2(-944, -134)
+
+[node name="Platform" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform5" unique_id=2021413909 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1091.3335, 624)
+
+[node name="Platform6" parent="Platform/Platform5/Platform6/Platform6/Platform6" unique_id=741115129 instance=ExtResource("2_e2o6t")]
+position = Vector2(7870, 328.66675)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6" unique_id=298051218 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1286, 43.333313)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6" unique_id=165576223 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1807.3334, -448.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6" unique_id=809028525 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2122, 414.66666)
+
+[node name="Platform" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6" unique_id=1072765821 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1883.3334, 895.3333)
+
+[node name="Platform5" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6" unique_id=1444627691 instance=ExtResource("2_e2o6t")]
+position = Vector2(-2762, -403.33334)
+
+[node name="Platform2" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6/Platform5" unique_id=441291147 instance=ExtResource("2_e2o6t")]
+position = Vector2(634.6667, 347.3333)
+
+[node name="Platform3" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6/Platform5" unique_id=1176250120 instance=ExtResource("2_e2o6t")]
+position = Vector2(-455.33334, 392.6667)
+
+[node name="Platform4" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6/Platform5" unique_id=1955115107 instance=ExtResource("2_e2o6t")]
+position = Vector2(-944, -134)
+
+[node name="Platform" parent="Platform/Platform5/Platform6/Platform6/Platform6/Platform6/Platform5" unique_id=1266202726 instance=ExtResource("2_e2o6t")]
+position = Vector2(-1091.3335, 624)
+
+[node name="player" parent="." unique_id=1401448783 instance=ExtResource("1_80nbo")]
+position = Vector2(-134, 3024)
+
+[node name="Rope" type="Line2D" parent="." unique_id=1263703691]
+
+[node name="enemy" parent="." unique_id=2065526091 instance=ExtResource("4_fc0e3")]
+
+[node name="Crown" parent="." unique_id=831177418 instance=ExtResource("3_feb5d")]
+position = Vector2(-400, -2699)
+scale = Vector2(5, 5)
+
+[node name="WinLabel" type="Label" parent="." unique_id=780483941]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "U win lol"
+
+[node name="KillZone" type="Area2D" parent="." unique_id=1371051901]
+script = ExtResource("6_ryrav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone" unique_id=1190734575]
+position = Vector2(23, 4498)
+shape = SubResource("RectangleShape2D_7jktm")
+
+[node name="Label" type="Label" parent="." unique_id=646602084]
+offset_left = 21.0
+offset_top = 2772.0
+offset_right = 473.0
+offset_bottom = 3109.0
+theme_override_font_sizes/font_size = 59
+text = "A & D - left right
+W - pull
+left click - rope 
+E - Detatch
+"
+
+[node name="Label2" type="Label" parent="." unique_id=1344088]
+offset_left = 3.0
+offset_top = 2642.0
+offset_right = 520.0
+offset_bottom = 2979.0
+theme_override_font_sizes/font_size = 59
+text = "Get chicken at top
+"

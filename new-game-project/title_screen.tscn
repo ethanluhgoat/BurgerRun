@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://btg117njqy6w6"]
+
+[ext_resource type="Script" uid="uid://btswps01jibjy" path="res://title_screen.gd" id="1_v6p8y"]
+[ext_resource type="FontFile" uid="uid://bv15lys45hmqb" path="res://SuperMario256.ttf" id="2_ak2if"]
+[ext_resource type="Texture2D" uid="uid://cijtaud7u41f2" path="res://New Piskel (6).png" id="2_ig5kc"]
+
+[node name="TitleScreen" type="Control" unique_id=1514919774]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_v6p8y")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1658644991]
+layout_mode = 0
+offset_left = -1964.0
+offset_top = -1257.0
+offset_right = 3258.0
+offset_bottom = 2141.0
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=127993556]
+position = Vector2(838, 404.00003)
+scale = Vector2(19.15625, 18.75)
+texture = ExtResource("2_ig5kc")
+
+[node name="Label1" type="Label" parent="." unique_id=2041766278]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 37.0
+offset_right = 847.0
+offset_bottom = 237.0
+theme_override_fonts/font = ExtResource("2_ak2if")
+theme_override_font_sizes/font_size = 200
+text = "Chicken"
+
+[node name="Label2" type="Label" parent="." unique_id=1341842011]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 411.0
+offset_right = 435.0
+offset_bottom = 562.0
+theme_override_fonts/font = ExtResource("2_ak2if")
+theme_override_font_sizes/font_size = 150
+text = "play"

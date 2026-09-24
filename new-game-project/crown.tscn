@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://do5kx3x80xx0f"]
+
+[ext_resource type="Script" uid="uid://dkhu2ojmp0p8y" path="res://crown.gd" id="1_3gbvv"]
+[ext_resource type="Texture2D" uid="uid://cw2gnwy4rv6ju" path="res://New Piskel (7).png" id="1_24twk"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3gbvv"]
+radius = 3.1450312
+height = 21.350876
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jgb2w"]
+radius = 5.6568537
+
+[node name="Crown" type="Area2D" unique_id=2113009919]
+script = ExtResource("1_3gbvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=344215832]
+rotation = 0.5228323
+texture = ExtResource("1_24twk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1059251278]
+position = Vector2(0, -2)
+rotation = 1.0467656
+shape = SubResource("CapsuleShape2D_3gbvv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1662130918]
+position = Vector2(6, -4)
+rotation = 1.0467656
+shape = SubResource("CircleShape2D_jgb2w")

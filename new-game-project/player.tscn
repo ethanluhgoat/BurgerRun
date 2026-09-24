@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://ckudr8chj1kgo"]
+
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://b7k7xaohfjqgh" path="res://New Piskel (6) (1).png" id="2_onrkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hqtel"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sweqy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3pqv")
+}],
+"loop": true,
+"name": &"alive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hqtel")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 63.531487
+
+[node name="player" type="CharacterBody2D" unique_id=1401448783]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=449455580]
+position = Vector2(2.9802322e-08, 1.1920929e-07)
+scale = Vector2(5.101562, 5.0387735)
+sprite_frames = SubResource("SpriteFrames_sweqy")
+animation = &"alive"
+autoplay = "alive"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=189075117]
+position = Vector2(-0.5, 0)
+shape = SubResource("CircleShape2D_onrkg")
+
+[node name="RayCast2D" type="RayCast2D" parent="." unique_id=1074098470]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1500693255]
+zoom = Vector2(0.4, 0.4)
